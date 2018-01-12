@@ -1,13 +1,6 @@
 {
-    "maxReviewers": "2",
-    "numFilesToCheck": "10",
     "message": "@pullRequester, thanks! @reviewers, please review this.",
     "findPotentialReviewers": true,
-    "actions": [
-        "opened"
-    ],
-    "skipAlreadyAssignedPR": false,
-    "skipAlreadyMentionedPR": false,
     "assignToReviewer": true,
     "createReviewRequest": true,
     "createComment": true,
