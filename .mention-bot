@@ -1,29 +1,15 @@
 {
-  "maxReviewers": "2", // Maximum  number of people to ping in the PR message, default is 3
-  "numFilesToCheck": "10", // Number of files to check against, default is 5
-  "message": "@pullRequester, thanks! @reviewers, please review this.",
-             // custom message using @pullRequester and @reviewers
-  "alwaysNotifyForPaths": [
-    {
-      "name": "ghuser", // The user's Github username
-      "files": ["src/js/**/*.js"], // The array of file globs associated with the user
-      "skipTeamPrs": false // mention-bot will exclude the creator's own team from mentions
-    }
-  ], // Users will always be mentioned based on file glob
-  "fallbackNotifyForPaths": [
-    {
-      "name": "ghuser", // The user's Github username
-      "files": ["src/js/**/*.js"], // The array of file globs associated with the user
-      "skipTeamPrs": false // mention-bot will exclude the creator's own team from mentions
-    }
-  ], // Users will be mentioned based on file glob if no other user was found
-  "findPotentialReviewers": true, // mention-bot will try to find potential reviewers based on files history, if disabled, `alwaysNotifyForPaths` is used instead
-  "actions": ["opened"], // List of PR actions that mention-bot will listen to, default is "opened"
-  "branches": [],  // List of branches that mention-bot will listen to, default is all branches
-  "skipAlreadyAssignedPR": false, // mention-bot will ignore already assigned PR's
-  "skipAlreadyMentionedPR": false, // mention-bot will ignore if there is already existing an exact mention
-  "assignToReviewer": false, // mention-bot assigns the most appropriate reviewer for PR
-  "createReviewRequest": false, // mention-bot creates review request for the most appropriate reviewer for PR
-  "createComment": true, // mention-bot creates a comment mentioning the reviewers for the PR
-  "delayed": false, // mention-bot will wait to comment until specified time in `delayedUntil` value
+    "maxReviewers": "2",
+    "numFilesToCheck": "10",
+    "message": "@pullRequester, thanks! @reviewers, please review this.",
+    "findPotentialReviewers": true,
+    "actions": [
+        "opened"
+    ],
+    "skipAlreadyAssignedPR": false,
+    "skipAlreadyMentionedPR": false,
+    "assignToReviewer": true,
+    "createReviewRequest": true,
+    "createComment": true,
+    "delayed": false
 }
